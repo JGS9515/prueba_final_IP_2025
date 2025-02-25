@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <Logica/datos.h>
+
+int main(void)
+{
+    printf("Hello World!\n");
+    return 0;
+}
+
+/*Programe una función en C que permita obtener la mayor duración de juegos
+terminados y los identificadores de los juegos que hayan durado esa cantidad de
+minutos.*/
+
+void obtenerMayorDuracionJuegosTerminados(Juego juegos[], int cantJuegos, int *mayorDuracion, int idsJuegos[], int *cantIds){
+    *mayorDuracion = -1;
+    *cantIds = 0;
+    int i;
+    for(i = 0; i < cantJuegos; i++){
+        if(juegos[i].estado == 0 || juegos[i].estado == 1 || juegos[i], juegos[i].estado == 2){
+            if(juegos[i].duracionMinutos > *mayorDuracion){
+                *mayorDuracion = juegos[i].duracionMinutos;
+                *cantIds = 0;
+                idsJuegos[(*cantIds)++] = juegos[i].id;
+            }else if(juegos[i].duracionMinutos = *mayorDuracion){
+                idsJuegos[(cantIds)++] = juegos[i].id;             
+            }
+        }
+    }
+    if(*mayorDuracion == -1){
+        *mayorDuracion = 0;
+    }
+    
+}

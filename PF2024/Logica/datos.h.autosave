@@ -1,0 +1,33 @@
+#ifndef Datos_H
+#define Datos_H
+
+#define MAX_EQUIPOS 20
+#define MAX_JUEGOS 100
+
+typedef struct{
+    int id;                    
+    char nombre[25];            
+    char provincia[50]; 
+    char director[50];          
+}Equipo;
+
+typedef struct{
+    int id;                    
+    int idEquipoLocal;          
+    int idEquipoVisitante;      
+    int estado;                 
+    int duracionMinutos;        
+    int carrerasPorEntrada[2][9];
+}Juego;
+
+
+typedef struct {
+    int id;                   
+    int cantEquipos;           
+    Equipo equipos[MAX_EQUIPOS]; 
+    int cantJuegos; 
+    Juego juegos[MAX_JUEGOS];  
+}Serie;
+
+
+#endif
